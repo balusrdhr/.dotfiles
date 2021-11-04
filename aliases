@@ -1,0 +1,18 @@
+#Own Aliases and other settings.
+#Use "source $HOME/.bash_ownConfig.sh" in .bashrc to load
+
+#alias l = "ls -a"
+#alias ls = "ls -a"
+alias l="ll -alh"
+alias v="nvim"
+alias dragons="conda activate dragons"
+alias elist="conda env list"
+
+alias tailf="tail -f"
+alias jlremote="jupyter-lab --no-browser --port=1377"
+
+alias watchme="watch -n 10 \"showq | grep bsreedha \""
+alias tls="tmux ls"
+alias ta="tmux attach -t"
+alias use="du -sh ./"
+alias num="lfs find . |wc -l"
