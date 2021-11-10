@@ -12,6 +12,7 @@ alias tailf="tail -f"
 alias jlremote="jupyter-lab --no-browser --port=1377"
 
 alias watchme="watch -n 10 \"showq | grep bsreedha \""
+alias tmux="tmux -f .dotfiles/tmux.conf"
 alias tls="tmux ls"
 alias ta="tmux attach -t"
 alias use="du -sh ./"
