@@ -1,0 +1,47 @@
+#My own Aliases and other settings.
+#Use "source $HOME/.aliases_own" in .bashrc/.zshrc to load
+
+#Aliases:
+#alias ozstar="bsreedha@ozstar.swin.edu.au"
+alias oz="ssh -X bsreedha@ozstar.swin.edu.au"
+alias gadi="ssh -X bs8772@gadi.nci.org.au"
+
+alias l="ll -alh"
+alias v="nvim"
+alias ls="ls"
+
+alias dragons="conda activate dragons"
+alias elist="conda env list"
+alias donda="conda deactivate"
+
+alias code="jupyter-lab"
+
+alias tls="tmux ls"
+alias ta="tmux attach -t"
+
+#Jupyter-lab settings:
+function jllocal {
+  port=1377
+  remote_username=bsreedha
+  remote_hostname=ozstar.swin.edu.au
+  url="http://localhost:$port"
+  echo "Opening $url"
+  #xdg-open "$url"
+  open -a "Google Chrome" $url
+  cmd="ssh -CNL localhost:"$port":localhost:"$port" $remote_username@$remote_hostname"
+  echo "Running '$cmd'"
+  eval "$cmd"
+}
+
+function jlgadi {
+  port=1378
+  remote_username=bs8772
+  remote_hostname=gadi.nci.org.au
+  url="http://localhost:$port"
+  echo "Opening $url"
+  #xdg-open "$url"
+  open -a "Google Chrome" $url
+  cmd="ssh -CNL localhost:"$port":localhost:"$port" $remote_username@$remote_hostname"
+  echo "Running '$cmd'"
+  eval "$cmd"
+}
