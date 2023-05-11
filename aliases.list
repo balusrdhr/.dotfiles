@@ -3,8 +3,10 @@
 
 #Aliases:
 #alias ozstar="bsreedha@ozstar.swin.edu.au"
-alias oz="ssh -X bsreedha@ozstar.swin.edu.au"
-alias gadi="ssh -X bs8772@gadi.nci.org.au"
+alias oz="TERM=xterm-256color ssh ozstar.swin.edu.au"
+#ssh -X bsreedha@ozstar.swin.edu.au"
+alias gadi="TERM=xterm-256color ssh gadi.nci.org.au"
+#"ssh -X bs8772@gadi.nci.org.au"
 
 alias l="ll -alh"
 alias v="nvim"
@@ -27,7 +29,7 @@ function jllocal {
   url="http://localhost:$port"
   echo "Opening $url"
   #xdg-open "$url"
-  open -a "Google Chrome" $url
+  open -a "Safari" $url
   cmd="ssh -CNL localhost:"$port":localhost:"$port" $remote_username@$remote_hostname"
   echo "Running '$cmd'"
   eval "$cmd"
@@ -40,7 +42,7 @@ function jlgadi {
   url="http://localhost:$port"
   echo "Opening $url"
   #xdg-open "$url"
-  open -a "Google Chrome" $url
+  open -a "Safari" $url
   cmd="ssh -CNL localhost:"$port":localhost:"$port" $remote_username@$remote_hostname"
   echo "Running '$cmd'"
   eval "$cmd"
