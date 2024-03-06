@@ -3,7 +3,8 @@
 
 #Aliases:
 #alias ozstar="bsreedha@ozstar.swin.edu.au"
-alias oz="TERM=xterm-256color ssh ozstar.swin.edu.au"
+#alias oz="TERM=xterm-256color ssh ozstar.swin.edu.au"
+alias oz="TERM=xterm-256color ssh bsreedha@nt.swin.edu.au"
 #ssh -X bsreedha@ozstar.swin.edu.au"
 alias gadi="TERM=xterm-256color ssh gadi.nci.org.au"
 #"ssh -X bs8772@gadi.nci.org.au"
@@ -18,14 +19,17 @@ alias donda="conda deactivate"
 
 alias code="jupyter-lab"
 
+alias t="tmux"
 alias tls="tmux ls"
 alias ta="tmux attach -t"
 
+alias q="python3 ~/codes/quotes_/quotes_.py"
 #Jupyter-lab settings:
 function jllocal {
   port=1377
   remote_username=bsreedha
-  remote_hostname=ozstar.swin.edu.au
+  #remote_hostname=ozstar.swin.edu.au
+  remote_hostname=nt.swin.edu.au
   url="http://localhost:$port"
   echo "Opening $url"
   #xdg-open "$url"

@@ -130,6 +130,9 @@ eval "$(starship init zsh)"
 
 source $HOME/.cargo/env
 source $HOME/.dotfiles/aliases.list
+tmux source-file $HOME/.tmux/.tmux.conf.local
+
+conda activate base
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
