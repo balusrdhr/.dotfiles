@@ -13,10 +13,6 @@ alias l="ll -alh"
 alias v="nvim"
 alias ls="ls"
 
-alias dragons="conda activate dragons"
-alias elist="conda env list"
-alias donda="conda deactivate"
-
 alias code="jupyter-lab"
 
 alias t="tmux"
