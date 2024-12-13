@@ -106,20 +106,10 @@ source $ZSH/oh-my-zsh.sh
 prompt_context(){}
 source $HOME/.dotfiles/aliases.list
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/563/bs8772/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/563/bs8772/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/563/bs8772/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/563/bs8772/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-#module load openmpi/4.1.2 fftw3/3.3.8 hdf5/1.12.1p gsl/2.6
 module load hdf5
+
+
 eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
+
+export PATH="/scratch/cm25/bs8772/rust/bin:$PATH"
