@@ -11,8 +11,9 @@ alias gadi="TERM=xterm-256color ssh gadi.nci.org.au"
 
 # alias l="ll -alh"
 alias v="nvim"
-alias ls="ls"
+# alias ls="ls"
 
+alias ls="eza --git --grid --icons --no-permissions --no-time --no-user --group-directories-first"
 alias l="eza -l --git --grid --icons --no-permissions --no-time --no-user --group-directories-first"
 alias lz="eza -l --git --grid --icons --no-permissions --no-time --no-user -all --group-directories-first"
 alias lza="eza -l --git --grid --icons --no-permissions --no-time --no-user --total-size -all --group-directories-first"
