@@ -5,7 +5,6 @@ if [ -n "$PS1" ] && [ -z "$TMUX" ]; then
   tmux new-session -A -s 0
   tmux source-file $HOME/.tmux/.tmux.conf.local
 fi
-source $HOME/.dotfiles/aliases.list
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -116,11 +115,10 @@ prompt_context(){}
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+source $HOME/.dotfiles/aliases.list
 
 source $HOME/.cargo/env
-eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
-export PATH=~/local/bin:$PATH
+export PATH=~/.local/bin:$PATH
 
-source $HOME/.python_venvs/envs/work/bin/activate
-
+eval "$(starship init zsh)"

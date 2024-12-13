@@ -9,9 +9,13 @@ alias oz="TERM=xterm-256color ssh bsreedha@nt.swin.edu.au"
 alias gadi="TERM=xterm-256color ssh gadi.nci.org.au"
 #"ssh -X bs8772@gadi.nci.org.au"
 
-alias l="ll -alh"
+# alias l="ll -alh"
 alias v="nvim"
 alias ls="ls"
+
+alias l="eza -l --git --grid --icons --no-permissions --no-time --no-user --group-directories-first"
+alias lz="eza -l --git --grid --icons --no-permissions --no-time --no-user -all --group-directories-first"
+alias lza="eza -l --git --grid --icons --no-permissions --no-time --no-user --total-size -all --group-directories-first"
 
 alias code="jupyter-lab"
 
@@ -20,6 +24,11 @@ alias tls="tmux ls"
 alias ta="tmux attach -t"
 
 alias q="python3 ~/codes/quotes_/quotes_.py"
+
+#Python envs
+alias ash="source $HOME/.python_venvs/envs/ashvini/bin/activate"
+alias uni="source $HOME/.python_venvs/envs/unimelb/bin/activate"
+
 #Jupyter-lab settings:
 function jllocal {
   port=1377
